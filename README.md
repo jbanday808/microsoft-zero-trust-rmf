@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# microsoft-zero-trust-rmf
-Zero Trust, RMF, and DISA STIG architecture for secure, compliant mission systems.
-=======
+
 # Microsoft Zero Trust and RMF Executive Security Architecture
 
 ## Project Purpose
@@ -213,4 +210,3 @@ This is an independent educational project. The organization, systems, risks, da
 **James Banday**
 
 Threat Hunter | Cyber Intrusion Analyst | Cloud Security | Kubernetes | DevSecOps | Incident Response
->>>>>>> 794243e (Create Microsoft Zero Trust RMF and DISA STIG architecture)
