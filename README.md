@@ -1,4 +1,3 @@
-
 # Microsoft Zero Trust and RMF Executive Security Architecture
 
 ## Project Purpose
@@ -33,9 +32,65 @@ It is written for non-technical stakeholders, executives, program managers, and 
 
 ## Architecture Diagrams
 
-- Figure 1. Zero Trust Architecture — [Zero Trust Governance Policy](governance/05-zero-trust-governance-policy.md)
-- Figure 2. Risk Management Framework Lifecycle — [RMF for Leaders and Stakeholders](rmf/04-rmf-for-leaders.md)
-- Figure 3. DISA STIG Implementation Lifecycle — [DISA STIG Governance and Implementation](compliance/10-disa-stig-governance-and-implementation.md)
+The following diagrams provide a plain-language view of how Zero Trust, RMF, and DISA STIGs work together to protect systems, manage risk, and support leadership decisions.
+
+### Figure 1 — Zero Trust Architecture
+
+<p align="center">
+  <img
+    src="governance/05-zero-trust-diagram.png"
+    alt="Zero Trust Architecture"
+    width="900"
+  >
+</p>
+
+<p align="center">
+  <em>Figure 1. Zero Trust Architecture</em>
+</p>
+
+Zero Trust checks users, devices, applications, and access requests before access is granted. It limits permissions to what is necessary and helps reduce the impact of a compromised account, endpoint, or application.
+
+[View the Zero Trust Governance Policy](governance/05-zero-trust-governance-policy.md)
+
+---
+
+### Figure 2 — Risk Management Framework Lifecycle
+
+<p align="center">
+  <img
+    src="architecture/03-rmf-lifecycle.png"
+    alt="Risk Management Framework Lifecycle"
+    width="900"
+  >
+</p>
+
+<p align="center">
+  <em>Figure 2. Risk Management Framework Lifecycle</em>
+</p>
+
+RMF provides a repeatable seven-step process for understanding risk, selecting security controls, confirming that protections work, and supporting leadership authorization decisions. Continuous monitoring keeps the risk decision current as systems, missions, and threats change.
+
+[View RMF for Leaders and Stakeholders](rmf/04-rmf-for-leaders.md)
+
+---
+
+### Figure 3 — DISA STIG Implementation Lifecycle
+
+<p align="center">
+  <img
+    src="compliance/10-disa-stig-diagram.png"
+    alt="DISA STIG Implementation Lifecycle"
+    width="900"
+  >
+</p>
+
+<p align="center">
+  <em>Figure 3. DISA STIG Implementation Lifecycle</em>
+</p>
+
+DISA STIGs provide detailed secure-configuration requirements for systems and technologies. The lifecycle helps teams identify applicable requirements, assess current settings, correct weaknesses, validate results, manage exceptions, and maintain secure configurations over time.
+
+[View DISA STIG Governance and Implementation](compliance/10-disa-stig-governance-and-implementation.md)
 
 ## Plain-Language Overview
 
@@ -98,16 +153,16 @@ The organization has five priority concerns:
 
 ## Recommended Review Order
 
-1. Executive brief
-2. Target security architecture
-3. RMF lifecycle image
-4. RMF guide for leaders
-5. Zero Trust governance policy
-6. Enterprise risk register
-7. 180-day roadmap
-8. Major incident playbook
-9. Executive dashboard
-10. DISA STIG governance and implementation
+1. [Executive Security Brief](executive/01-executive-brief.md)
+2. [Target Security Architecture](architecture/02-target-security-architecture.md)
+3. [RMF Lifecycle Diagram](architecture/03-rmf-lifecycle.png)
+4. [RMF for Leaders and Stakeholders](rmf/04-rmf-for-leaders.md)
+5. [Zero Trust Governance Policy](governance/05-zero-trust-governance-policy.md)
+6. [Enterprise Risk Register](risk/06-enterprise-risk-register.csv)
+7. [180-Day Security Roadmap](roadmap/07-180-day-roadmap.md)
+8. [Major Security Incident Playbook](procedures/08-major-incident-playbook.md)
+9. [Executive Cybersecurity Dashboard](metrics/09-executive-dashboard.md)
+10. [DISA STIG Governance and Implementation](compliance/10-disa-stig-governance-and-implementation.md)
 11. [Lessons Learned](lessons-learned.md)
 
 ## Lessons Learned
