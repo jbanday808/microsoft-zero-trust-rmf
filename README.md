@@ -21,6 +21,7 @@ It is written for non-technical stakeholders, executives, program managers, and 
 - [Target Business Outcomes](#target-business-outcomes)
 - [Repository Contents](#repository-contents)
 - [Recommended Review Order](#recommended-review-order)
+- [Simulated eMASS Compliance Management](#simulated-emass-compliance-management)
 - [Lessons Learned](#lessons-learned)
 - [WSL and VS Code Setup](#wsl-and-vs-code-setup)
 - [GitHub Publishing Commands](#github-publishing-commands)
@@ -133,7 +134,13 @@ The organization has five priority concerns:
 ├── README.md
 ├── lessons-learned.md
 ├── executive/
-│   └── 01-executive-brief.md
+│   ├── 01-executive-brief.md
+│   └── emass/
+│       ├── README.md
+│       ├── 01-emass-rmf-workflow.md
+│       ├── 02-control-evidence-register.csv
+│       ├── 03-poam-tracker.csv
+│       └── 04-ato-milestone-dashboard.md
 ├── architecture/
 │   ├── 02-target-security-architecture.md
 │   └── 03-rmf-lifecycle.png
@@ -163,7 +170,14 @@ The organization has five priority concerns:
 8. [Major Security Incident Playbook](procedures/08-major-incident-playbook.md)
 9. [Executive Cybersecurity Dashboard](metrics/09-executive-dashboard.md)
 10. [DISA STIG Governance and Implementation](compliance/10-disa-stig-governance-and-implementation.md)
-11. [Lessons Learned](lessons-learned.md)
+11. [Simulated eMASS Compliance Management](executive/emass/README.md)
+12. [Lessons Learned](lessons-learned.md)
+
+## Simulated eMASS Compliance Management
+
+The [simulated eMASS portfolio section](executive/emass/README.md) connects RMF security controls to fictional implementation evidence, POA&M remediation, continuous monitoring, and ATO milestones. It is a portfolio demonstration only and is not exported from or connected to a live eMASS environment.
+
+Developed a simulated eMASS workflow to track RMF security controls, implementation evidence, POA&M remediation activities, continuous-monitoring requirements, and ATO milestones for a Microsoft Zero Trust environment.
 
 ## Lessons Learned
 

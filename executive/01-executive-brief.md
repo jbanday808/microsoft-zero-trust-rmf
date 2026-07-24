@@ -87,6 +87,10 @@ Use policy, evidence, metrics, and risk reviews to prevent security controls fro
 | Unauthorized public exposure of critical resources | 0 |
 | High-risk exceptions past expiration | 0 |
 
+## Simulated eMASS Compliance Management
+
+The [simulated eMASS compliance-management section](emass/README.md) demonstrates how the program could track RMF security controls, implementation evidence, POA&M remediation activities, continuous-monitoring requirements, and ATO milestones. All records are fictional portfolio demonstration data and are not exported from or connected to a live eMASS environment.
+
 ## Executive Summary
 
 This plan does not attempt to remove all risk. It creates a practical way to reduce risk, identify remaining weaknesses, and give leaders enough information to make responsible decisions.
