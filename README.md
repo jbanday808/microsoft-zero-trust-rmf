@@ -21,6 +21,7 @@ It is written for non-technical stakeholders, executives, program managers, and 
 - [Target Business Outcomes](#target-business-outcomes)
 - [Repository Contents](#repository-contents)
 - [Recommended Review Order](#recommended-review-order)
+- [CVE Case Studies](#cve-case-studies)
 - [Simulated eMASS Compliance Management](#simulated-emass-compliance-management)
 - [Lessons Learned](#lessons-learned)
 - [WSL and VS Code Setup](#wsl-and-vs-code-setup)
@@ -173,6 +174,13 @@ The organization has five priority concerns:
 11. [Simulated eMASS Compliance Management](executive/emass/README.md)
 12. [Lessons Learned](lessons-learned.md)
 
+## CVE Case Studies
+
+- [PHP remote code execution — CVE-2026-109618 and CVE-2026-109619](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md): A complete response guide covering the seven RMF steps, mitigation and patch validation, DISA STIG implementation, Azure Zero Trust safeguards, detection, incident response, and assessment templates.
+- [Microsoft Office remote code execution — CVE-2026-42831](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md): The existing Office vulnerability case study.
+
+The PHP case study contains verified public advisory information and unfilled assessment templates; it does not claim that any live systems have been assessed or remediated.
+
 ## Simulated eMASS Compliance Management
 
 The [simulated eMASS portfolio section](executive/emass/README.md) connects RMF security controls to fictional implementation evidence, POA&M remediation, continuous monitoring, and ATO milestones. It is a portfolio demonstration only and is not exported from or connected to a live eMASS environment.
@@ -279,3 +287,4 @@ This is an independent educational project. The organization, systems, risks, da
 **James Banday**
 
 Threat Hunter | Cyber Intrusion Analyst | Cloud Security | Kubernetes | DevSecOps | Incident Response
+
