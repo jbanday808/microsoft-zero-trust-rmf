@@ -134,7 +134,7 @@ The organization has five priority concerns:
 | Featured folder | Start here |
 |---|---|
 | [cve-case-studies/CVE-2026-42831-office-rce-rmf](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md) | Microsoft Office vulnerability response, RMF, and eMASS context. |
-| [cve-case-studies/CVE-2026-109618-109619-php-rce-rmf](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md) | PHP vulnerability response, mitigation, and DISA STIG assessment. |
+| [cve-case-studies/CVE-2026-109618-109619-php-rce-rmf](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md) | PHP vulnerability response, IAVM tracking, mitigation, and DISA STIG assessment. |
 | [executive/emass](executive/emass/README.md) | [What is eMASS?](executive/emass/00-what-is-emass.md), simulated workflow, evidence register, POA&M tracker, and ATO dashboard. |
 
 ```text
@@ -183,10 +183,12 @@ The organization has five priority concerns:
 
 ## CVE Case Studies
 
-- [PHP remote code execution — CVE-2026-109618 and CVE-2026-109619](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md): A complete response guide covering the seven RMF steps, mitigation and patch validation, DISA STIG implementation, Azure Zero Trust safeguards, detection, incident response, and assessment templates.
+- [PHP remote code execution — CVE-2026-109618 and CVE-2026-109619](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md): A complete response guide covering the seven RMF steps, mitigation and patch validation, DISA STIG implementation, IAVM notice tracking and reporting, Azure Zero Trust safeguards, detection, incident response, and assessment templates.
 - [Microsoft Office remote code execution — CVE-2026-42831](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md): The existing Office vulnerability case study.
 
 The PHP case study contains verified public advisory information and unfilled assessment templates; it does not claim that any live systems have been assessed or remediated.
+
+Read the PHP [Information Assurance Vulnerability Management (IAVM) guide](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/13-iavm-implementation-guide.md) for notice verification, applicability, deadlines, remediation evidence, and reporting templates.
 
 ## What is eMASS?
 
