@@ -22,6 +22,7 @@ It is written for non-technical stakeholders, executives, program managers, and 
 - [Repository Contents](#repository-contents)
 - [Recommended Review Order](#recommended-review-order)
 - [CVE Case Studies](#cve-case-studies)
+- [What is eMASS?](#what-is-emass)
 - [Simulated eMASS Compliance Management](#simulated-emass-compliance-management)
 - [Lessons Learned](#lessons-learned)
 - [WSL and VS Code Setup](#wsl-and-vs-code-setup)
@@ -130,6 +131,12 @@ The organization has five priority concerns:
 
 ## Repository Contents
 
+| Featured folder | Start here |
+|---|---|
+| [cve-case-studies/CVE-2026-42831-office-rce-rmf](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md) | Microsoft Office vulnerability response, RMF, and eMASS context. |
+| [cve-case-studies/CVE-2026-109618-109619-php-rce-rmf](cve-case-studies/CVE-2026-109618-109619-php-rce-rmf/README.md) | PHP vulnerability response, mitigation, and DISA STIG assessment. |
+| [executive/emass](executive/emass/README.md) | [What is eMASS?](executive/emass/00-what-is-emass.md), simulated workflow, evidence register, POA&M tracker, and ATO dashboard. |
+
 ```text
 .
 ├── README.md
@@ -180,6 +187,12 @@ The organization has five priority concerns:
 - [Microsoft Office remote code execution — CVE-2026-42831](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md): The existing Office vulnerability case study.
 
 The PHP case study contains verified public advisory information and unfilled assessment templates; it does not claim that any live systems have been assessed or remediated.
+
+## What is eMASS?
+
+**eMASS stands for Enterprise Mission Assurance Support Service.** It is a government web application used to organize security controls, assessment evidence, corrective actions, and authorization records throughout the Risk Management Framework (RMF) process.
+
+Read [What is eMASS?](executive/emass/00-what-is-emass.md) for a simple explanation and an example using the [Office case study](cve-case-studies/CVE-2026-42831-office-rce-rmf/README.md#what-is-emass).
 
 ## Simulated eMASS Compliance Management
 
