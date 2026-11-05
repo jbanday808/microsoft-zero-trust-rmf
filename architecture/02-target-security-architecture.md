@@ -7,38 +7,25 @@ Build a secure environment where access is checked continuously, sensitive data 
 ## High-Level Architecture
 
 ```mermaid
-flowchart LR
-    PEOPLE[Users and Partners] --> ID[Microsoft Entra ID]
-    DEVICES[Managed Endpoints] --> INTUNE[Microsoft Intune]
-    INTUNE --> ACCESS[Conditional Access]
-    ID --> ACCESS
-    PIM[Privileged Identity Management] --> ACCESS
-
-    ACCESS --> APPS[Applications and APIs]
-    APPS --> AZURE[Azure Workloads]
-    APPS --> AWS[AWS Workloads]
-    APPS --> DATA[Sensitive Data]
-
-    KEY[Azure Key Vault] --> APPS
-    PURVIEW[Microsoft Purview] --> DATA
-
-    DEVICES --> ENDPOINT[Defender for Endpoint]
-    ID --> XDR[Microsoft Defender XDR]
-    ENDPOINT --> XDR
-    AZURE --> CLOUD[Defender for Cloud]
-    AWS --> CLOUD
-
-    XDR --> SENTINEL[Microsoft Sentinel]
-    CLOUD --> SENTINEL
-    APPS --> SENTINEL
-
-    POLICY[Azure Policy] --> AZURE
-    SENTINEL --> RESPONSE[Incident Response]
-    SENTINEL --> RISK[RMF Evidence and Risk Reporting]
-    CLOUD --> RISK
-    POLICY --> RISK
-    PURVIEW --> RISK
+flowchart TD
+    People["Users and managed endpoints"] --> Identity["Microsoft Entra ID"]
+    Endpoint["Intune and optional Defender integration"] -. "device state" .-> Decision["Conditional Access"]
+    Identity --> Decision
+    Decision --> Proxy["Entra Application Proxy"]
+    Connector["Private connector"] -->|"outbound TLS"| Proxy
+    Connector -->|"HTTPS"| App["Private Azure application"]
+    App -->|"managed identity"| Vault["Private Key Vault endpoint"]
+    Identity -. "identity events" .-> Logs["Log Analytics; optional Sentinel"]
+    Vault -. "audit events" .-> Logs
+    Logs --> Risk["Response and RMF evidence"]
 ```
+
+**Figure 1.** Identity checks, device compliance, private application access, and monitored secret access support the Azure development security design.
+
+The [complete Azure DEV architecture](../zero-trust/azure-dev/01-architecture.md) defines the concrete network rules, decision points, assumptions, and implementation boundary. Follow the [24-step guide](../zero-trust/azure-dev/02-step-by-step-guide.md) to deploy and test it. The static application and managed identity secret exercise are separate demonstrations.
+
+The sections below describe broader target capabilities. Features such as web application firewalls, full data classification, and advanced response are not automatically deployed by the lab templates.
+
 
 ## How the Design Protects the Organization
 

@@ -1,0 +1,216 @@
+{
+  "system": "Azure Zero Trust DEV",
+  "status": "NOT RUN",
+  "cases": [
+    {
+      "id": "ID-01",
+      "expected": "Assigned pilot on compliant device is allowed after required MFA.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ID-02",
+      "expected": "Assigned pilot on unmanaged device is denied after enforcement.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ID-03",
+      "expected": "Unassigned user is denied application access.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ID-04",
+      "expected": "Report-only evaluation is recorded without enforcing denial.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "ID-05",
+      "expected": "Both emergency accounts provide tested administrative recovery.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "DEV-01",
+      "expected": "Enrolled pilot client reports intended compliance settings.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-01",
+      "expected": "Connector reaches app HTTPS with validated certificate.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-02",
+      "expected": "Connector cannot reach app RDP; an effective NSG deny is verified.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-03",
+      "expected": "Connector cannot reach app HTTP; an effective NSG deny is verified.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-04",
+      "expected": "Connector cannot reach vault private endpoint HTTPS.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-05",
+      "expected": "App reaches vault HTTPS through private endpoint.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "NET-06",
+      "expected": "App cannot reach connector RDP.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "DATA-01",
+      "expected": "App managed identity reads the synthetic secret.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "DATA-02",
+      "expected": "Read-only app identity cannot write a secret.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "DATA-03",
+      "expected": "Vault public data access is unavailable for the documented network reason.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "LOG-01",
+      "expected": "Required generated events arrive in the documented destinations.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "DET-01",
+      "expected": "A configured rule produces a real reviewed alert or incident.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "POL-01",
+      "expected": "Actual vault policy evaluation is compliant; disposable negative case is noncompliant.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "PRIV-01",
+      "expected": "Optional licensed PIM activation and expiry enforce the intended scope.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "OPS-01",
+      "expected": "Pilot access policy rollback and restored enforcement are both verified.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    },
+    {
+      "id": "OPS-02",
+      "expected": "Single connector outage and recovery behavior are observed and recorded.",
+      "status": "NOT RUN",
+      "actual": null,
+      "executed_utc": null,
+      "source": null,
+      "evidence": [],
+      "reviewer": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "displayName": "EZTA-DEV-CA01-Pilot-App-MFA-Compliant",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "users": {
+      "includeGroups": [
+        "REPLACE_WITH_PILOT_GROUP_OBJECT_ID"
+      ],
+      "excludeUsers": [
+        "REPLACE_WITH_EMERGENCY_ACCOUNT_1_OBJECT_ID",
+        "REPLACE_WITH_EMERGENCY_ACCOUNT_2_OBJECT_ID"
+      ]
+    },
+    "applications": {
+      "includeApplications": [
+        "REPLACE_WITH_ENTERPRISE_APPLICATION_CLIENT_ID"
+      ]
+    }
+  },
+  "grantControls": {
+    "operator": "AND",
+    "builtInControls": [
+      "mfa",
+      "compliantDevice"
+    ]
+  }
+}

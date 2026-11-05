@@ -1,3 +1,21 @@
 *:Zone.Identifier
 .DS_Store
 Thumbs.db
+
+# Private lab records and local configuration
+private/
+.local/
+.azure/
+.env
+.env.*
+*.local.json
+*.local.ps1
+*.pfx
+*.p12
+*.key
+*.pem
+*.cer
+*.crt
+*.log
+__pycache__/
+*.py[cod]

@@ -9,11 +9,23 @@ This portfolio project shows how a fictional organization can reduce cyber risk 
 - Identity, endpoint, cloud, data, and monitoring controls
 - Clear leadership decisions, risk ownership, and measurable outcomes
 
-It is written for non-technical stakeholders, executives, program managers, and hiring managers.
+It supports executives, program managers, hiring managers, and engineers through plain-language governance material and a practical Azure development implementation.
+
+## Azure Zero Trust DEV Implementation
+
+The [Azure Zero Trust DEV package](zero-trust/azure-dev/README.md) extends this project with a hands-on architecture aligned to the supplied **ZT Engineer Lead, R0242994** role description.
+
+- [Complete 24-step deployment and integration guide](zero-trust/azure-dev/02-step-by-step-guide.md)
+- [Azure architecture and network boundaries](zero-trust/azure-dev/01-architecture.md)
+- [DoD pillars, RMF controls, and role alignment](zero-trust/azure-dev/03-dod-rmf-role-alignment.md)
+- [Validation, evidence, operations, and rollback](zero-trust/azure-dev/04-validation-and-evidence.md)
+
+The package includes Azure deployment templates, a private HTTPS application script, pilot access policy examples, network checks, and evidence templates. It builds on the existing `EZTA-DEV` group naming. Live tenant deployment and acceptance tests must be completed before results are claimed.
 
 ## Table of Contents
 
 - [Project Purpose](#project-purpose)
+- [Azure Zero Trust DEV Implementation](#azure-zero-trust-dev-implementation)
 - [Architecture Diagrams](#architecture-diagrams)
 - [Plain-Language Overview](#plain-language-overview)
 - [Fictional Organization](#fictional-organization)
@@ -37,23 +49,24 @@ It is written for non-technical stakeholders, executives, program managers, and 
 
 The following diagrams provide a plain-language view of how Zero Trust, RMF, and DISA STIGs work together to protect systems, manage risk, and support leadership decisions.
 
-### Figure 1 — Zero Trust Architecture
+### Figure 1 — Azure Zero Trust DEV Architecture
 
-<p align="center">
-  <img
-    src="governance/05-zero-trust-diagram.png"
-    alt="Zero Trust Architecture"
-    width="900"
-  >
-</p>
+```mermaid
+flowchart TD
+    User["Pilot user and managed Windows device"] --> Gate["Entra ID and Conditional Access"]
+    Intune["Intune compliance"] -. "device signal" .-> Gate
+    Gate -->|"MFA, compliant device, assignment"| Proxy["Entra Application Proxy"]
+    Connector["Private network connector"] -->|"outbound TLS tunnel"| Proxy
+    Connector -->|"validated HTTPS"| App["Private Azure application"]
+    App -->|"managed identity; separate secret exercise"| Vault["Private Azure Key Vault"]
+    Gate -. "sign-in and audit events" .-> Logs["Log Analytics; optional Sentinel"]
+    Vault -. "audit events" .-> Logs
+    Logs --> Evidence["Investigation and RMF evidence"]
+```
 
-<p align="center">
-  <em>Figure 1. Zero Trust Architecture</em>
-</p>
+**Figure 1.** Entra checks the user's identity and device before a private connector reaches the protected application and its demonstration secret.
 
-Zero Trust checks users, devices, applications, and access requests before access is granted. It limits permissions to what is necessary and helps reduce the impact of a compromised account, endpoint, or application.
-
-[View the Zero Trust Governance Policy](governance/05-zero-trust-governance-policy.md)
+[View the Azure architecture and implementation boundary](zero-trust/azure-dev/01-architecture.md) · [View the Zero Trust Governance Policy](governance/05-zero-trust-governance-policy.md)
 
 ---
 
@@ -107,7 +120,8 @@ DISA STIGs provide detailed secure-configuration requirements for systems and te
 **System:** Mission Collaboration Platform  
 **Users:** 1,200 employees and approved partners  
 **Endpoints:** 850 managed Windows devices  
-**Environment:** Microsoft Azure, Microsoft 365, selected AWS workloads, and on-premises services  
+**Environment:** Microsoft Azure, Microsoft 365, and on-premises services
+
 **Impact assumption:** Moderate confidentiality, integrity, and availability  
 
 ## Business Challenge
@@ -168,6 +182,8 @@ The organization has five priority concerns:
 
 ## Recommended Review Order
 
+For hands-on implementation, start with the [Azure DEV guide](zero-trust/azure-dev/02-step-by-step-guide.md). The following order covers the executive and governance material.
+
 1. [Executive Security Brief](executive/01-executive-brief.md)
 2. [Target Security Architecture](architecture/02-target-security-architecture.md)
 3. [RMF Lifecycle Diagram](architecture/03-rmf-lifecycle.png)
@@ -211,28 +227,27 @@ The [Lessons Learned](lessons-learned.md) summary explains the project’s key b
 ```bash
 mkdir -p ~/projects
 cd ~/projects
-
-cp /mnt/c/Users/james/Downloads/microsoft-zero-trust-rmf-executive-architecture-v3.zip .
-
-unzip microsoft-zero-trust-rmf-executive-architecture-v3.zip
-
-cd microsoft-zero-trust-rmf-executive-architecture
-
+git clone https://github.com/jbanday808/microsoft-zero-trust-rmf.git
+cd microsoft-zero-trust-rmf
 code .
 ```
 
+**Command overview:** `mkdir -p` creates the project directory if needed. `cd` enters a directory. `git clone` downloads the current repository. `code .` opens the project in VS Code. If already cloned, open the existing checkout and fetch the integration branch instead.
+
 ## GitHub Publishing Commands
 
+Use a branch for reviewed updates to this existing repository.
+
 ```bash
-git init
-git branch -M main
-
-git add .
-git commit -m "Create executive Zero Trust and RMF architecture"
-
-git remote add origin https://github.com/jbanday808/microsoft-zero-trust-rmf-executive-architecture.git
-git push -u origin main
+git switch -c docs/project-updates
+git status --short
+git add README.md architecture/02-target-security-architecture.md
+git diff --cached
+git commit -m "Update Zero Trust architecture documentation"
+git push -u origin docs/project-updates
 ```
+
+**Command overview:** `git switch -c` creates a working branch. `git status --short` lists changes. `git add` stages the named reviewed files. `git diff --cached` displays them before committing. `git commit` records the update, and `git push -u` publishes the branch for a pull request. Add other reviewed public files by their exact paths.
 
 ## Skills Demonstrated
 
